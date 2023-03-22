@@ -38,6 +38,9 @@ body .container{
     bottom: 5px;
     right: 10px;
     font-size: 30px ;
+    word-wrap: break-word;
+    white-space: nowrap;
+    word-break: break-word;
 }
 .container .button-cont{
     width:270px;
@@ -70,7 +73,7 @@ body .container{
     align-items: center;
     border-radius: 20px;
     justify-content: center;
-    color: #FFFFFF;
+    color: #e9e7e7;
 }
 .row .calc{
     color: orange;
@@ -79,5 +82,10 @@ body .container{
     cursor: pointer;
 }
 .but:hover{
-    background: rgb(83, 82, 82);
+    background: rgb(102, 101, 101);
+    color: #fff;
+    font-size: 21px;
+}
+.calc:hover{
+    color: orange;
 }
