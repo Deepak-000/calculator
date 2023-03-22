@@ -39,7 +39,7 @@ body .container{
     right: 10px;
     font-size: 30px ;
     word-wrap: break-word;
-    white-space: nowrap;
+    white-space: pre-wrap;
     word-break: break-word;
 }
 .container .button-cont{
