@@ -13,36 +13,44 @@ back.addEventListener('click',()=>{
     if(res.length == 0){
     result.innerHTML = '0';
     }else
-    result.innerHTML = res;
+    result.innerHTML = res
 })
 equ.addEventListener('click',()=>{
     try {
-        res = ''+eval(res);
-        result.innerHTML=res;
+        res = ''+eval(res)
+	if(parseFloat(res) == 0){
+		result.innerHTML = '0'
+		res = '';
+	}else{
+		if(res == 'Infinity'){
+			alert("Don't Divide with Zero")
+			result.innerHTML = '0';
+			res = ''
+		}
+		else
+			result.innerHTML = res;
+	}
     } catch (error) {
-        alert('syntax error');
-        res = '';
-        result.innerHTML = '0';
+        alert('Enter correct ')
+        res = ''
+        result.innerHTML = '0'
     }
 })
 nums.forEach((e)=>{
     e.addEventListener('click',()=>{
-        res += e.innerHTML;
-        result.innerHTML = res;
+        res += e.innerHTML
+        result.innerHTML = res
     })
 })
-let arr = document.querySelectorAll('.calc');
-let calc = Array.from(arr);
-calc.pop()
-console.log(calc)
 ac.addEventListener('click',()=>{
-    res = '';
+    res = ''
     result.innerHTML='0';
 })
+let arr = document.querySelectorAll('.calc');
 arr.forEach((e)=>{
     if(e != arr[arr.length-1] && e != arr[0])
     e.addEventListener('click',()=>{
-        res += e.innerHTML;
-        result.innerHTML = res;
+        res += e.innerHTML
+        result.innerHTML = res
     })
 })
