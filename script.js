@@ -31,7 +31,7 @@ equ.addEventListener('click',()=>{
 			result.innerHTML = res;
 	}
     } catch (error) {
-        alert('Enter correct ')
+        alert('Enter correct syntax')
         res = ''
         result.innerHTML = '0'
     }
